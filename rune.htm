@@ -5,11 +5,22 @@
         <style>
             @font-face {
                 font-family: runeFont;
-                src: url("../plutosion.github.io/runeFont.ttf");
+                src: url(runeFont.ttf);
             }
 
             html, body {
+                background: #5bcefa;
                 font-family: 'Calibri', 'Trebuchet MS', sans-serif;
+            }
+
+            #main {
+                margin-top: 7.5%;
+                margin-left: 15%;
+                width: 50%;
+                height: 50%;
+                border-radius: 50px;
+                background: #f5a9b8;
+                padding: 10%;
             }
 
             #title {
@@ -20,10 +31,15 @@
                 width: 500px;
                 height: 200px;
                 font-size: 30px;
+                resize: none;
             }
 
             #input, .symbol {
                 font-family: runeFont;
+            }
+
+            #input {
+                background-color: #ffffff !important;
             }
 
             #output {
@@ -56,67 +72,76 @@
                         decode();
                     });
                 }
+
+                var clear = document.getElementById("clear");
+
+                clear.addEventListener("click", function(e) {
+                    input.value = "";
+                    output.value = "";
+                });
                                 
             });
         </script>
     </head>
     <body>
-        <div id="title">Rune Decoder</div>
-        <textarea id="input"></textarea>
-        <textarea id="output"></textarea>
-        <br>
-        <button class="symbol">!</button>
-        <button class="symbol">"</button>
-        <button class="symbol">'</button>
-        <button class="symbol">,</button>
-        <button class="symbol">.</button>
-        <button class="symbol">:</button>
-        <button class="symbol">;</button>
-        <button class="symbol">?</button>
-        <button class="symbol">A</button>
-        <button class="symbol">B</button>
-        <button class="symbol">C</button>
-        <button class="symbol">D</button>
-        <button class="symbol">E</button>
-        <button class="symbol">F</button>
-        <button class="symbol">G</button>
-        <button class="symbol">H</button>
-        <button class="symbol">I</button>
-        <button class="symbol">J</button>
-        <button class="symbol">K</button>
-        <button class="symbol">L</button>
-        <button class="symbol">M</button>
-        <button class="symbol">N</button>
-        <button class="symbol">O</button>
-        <button class="symbol">P</button>
-        <button class="symbol">Q</button>
-        <button class="symbol">R</button>
-        <button class="symbol">S</button>
-        <button class="symbol">T</button>
-        <button class="symbol">U</button>
-        <button class="symbol">V</button>
-        <button class="symbol">W</button>
-        <button class="symbol">X</button>
-        <button class="symbol">Y</button>
-        <button class="symbol">Z</button>
-        <button class="symbol">a</button>
-        <button class="symbol">b</button>
-        <button class="symbol">c</button>
-        <button class="symbol">d</button>
-        <button class="symbol">e</button>
-        <button class="symbol">f</button>
-        <button class="symbol">g</button>
-        <button class="symbol">h</button>
-        <button class="symbol">i</button>
-        <button class="symbol">j</button>
-        <button class="symbol">k</button>
-        <button class="symbol">l</button>
-        <button class="symbol">m</button>
-        <button class="symbol">n</button>
-        <button class="symbol">o</button>
-        <button class="symbol">p</button>
-        <button class="symbol">q</button>
-        <button class="symbol">r</button>
-        
+        <div id="main">
+            <div id="title">Rune Decoder</div>
+            <textarea id="input" disabled></textarea>
+            <textarea id="output"></textarea>
+            <br>
+            <button class="symbol">!</button>
+            <button class="symbol">"</button>
+            <button class="symbol">'</button>
+            <button class="symbol">,</button>
+            <button class="symbol">.</button>
+            <button class="symbol">:</button>
+            <button class="symbol">;</button>
+            <button class="symbol">?</button>
+            <button class="symbol">A</button>
+            <button class="symbol">B</button>
+            <button class="symbol">C</button>
+            <button class="symbol">D</button>
+            <button class="symbol">E</button>
+            <button class="symbol">F</button>
+            <button class="symbol">G</button>
+            <button class="symbol">H</button>
+            <button class="symbol">I</button>
+            <button class="symbol">J</button>
+            <button class="symbol">K</button>
+            <button class="symbol">L</button>
+            <button class="symbol">M</button>
+            <button class="symbol">N</button>
+            <button class="symbol">O</button>
+            <button class="symbol">P</button>
+            <button class="symbol">Q</button>
+            <button class="symbol">R</button>
+            <button class="symbol">S</button>
+            <button class="symbol">T</button>
+            <button class="symbol">U</button>
+            <button class="symbol">V</button>
+            <button class="symbol">W</button>
+            <button class="symbol">X</button>
+            <button class="symbol">Y</button>
+            <button class="symbol">Z</button>
+            <button class="symbol">a</button>
+            <button class="symbol">b</button>
+            <button class="symbol">c</button>
+            <button class="symbol">d</button>
+            <button class="symbol">e</button>
+            <button class="symbol">f</button>
+            <button class="symbol">g</button>
+            <button class="symbol">h</button>
+            <button class="symbol">i</button>
+            <button class="symbol">j</button>
+            <button class="symbol">k</button>
+            <button class="symbol">l</button>
+            <button class="symbol">m</button>
+            <button class="symbol">n</button>
+            <button class="symbol">o</button>
+            <button class="symbol">p</button>
+            <button class="symbol">q</button>
+            <button class="symbol">r</button>
+            <button id="clear">Clear</button>
+        </div>
     </body>
 </html>
